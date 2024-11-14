@@ -3,58 +3,83 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
+
 </head>
 <body>
-    <div id="calculator">
-        <input type="text" id="display" readonly>
+    <h1>Bat Ball Stump Game</h1>
 
-        <div class="buttons-container">
-            <button class="button" onclick="currentDisplay='';
-            document.querySelector('#display').value=currentDisplay;">C</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'1';
-            document.querySelector('#display').value=currentDisplay;">1</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'2';
-            document.querySelector('#display').value=currentDisplay;">2</button>
+    <button onclick="
+    let randomNumber=Math.random()*3;
+    let computerChoice;
+    let result;
 
-            <button class="button" onclick="currentDisplay=currentDisplay+'+';
-            document.querySelector('#display').value=currentDisplay;">+</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'3';
-            document.querySelector('#display').value=currentDisplay;">3</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'4';
-            document.querySelector('#display').value=currentDisplay;">4</button>
+    if(randomNumber>0 && randomNumber<=1){
+        computerChoice='Bat';
+    }else if(randomNumber>1 && randomNumber<=2){
+        computerChoice='Ball';
+    }else{
+        computerChoice='Stump';
+    }
+    
+    if(computerChoice==='Bat'){
+        result=`It's a tie.`;
+    }else if(computerChoice==='Ball'){
+        result='User won.';
+    }else if(computerChoice==='Stump'){
+        result='Computer won the match.';
+    }
 
-            <button class="button" onclick="currentDisplay=currentDisplay+'-';
-            document.querySelector('#display').value=currentDisplay;">-</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'5';
-            document.querySelector('#display').value=currentDisplay;">5</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'6';
-            document.querySelector('#display').value=currentDisplay;">6</button>
+    alert(`You have chosen Bat, Computer choice is ${computerChoice} and ${result}`);
 
-            <button class="button" onclick="currentDisplay=currentDisplay+'*';
-            document.querySelector('#display').value=currentDisplay;">*</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'7';
-            document.querySelector('#display').value=currentDisplay;">7</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'8';
-            document.querySelector('#display').value=currentDisplay;">8</button>
+    ">Bat</button>
 
-            <button class="button" onclick="currentDisplay=currentDisplay+'/';
-            document.querySelector('#display').value=currentDisplay;">/</button>
-            <button class="button" onclick="
-            currentDisplay=eval(currentDisplay);
-            document.querySelector('#display').value=currentDisplay;">=</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'9';
-            document.querySelector('#display').value=currentDisplay;">9</button>
+    <button onclick="
+    let randomNumber=Math.random()*3;
+    let computerChoice;
+    let result;
 
-            <button class="button" onclick="currentDisplay=currentDisplay+'0';
-            document.querySelector('#display').value=currentDisplay;">0</button>
-            <button class="button" onclick="currentDisplay=currentDisplay+'.';
-            document.querySelector('#display').value=currentDisplay;">.</button>
-        </div>
-    </div>
+    if(randomNumber>0 && randomNumber<=1){
+        computerChoice='Bat';
+    }else if(randomNumber>1 && randomNumber<=2){
+        computerChoice='Ball';
+    }else{
+        computerChoice='Stump';
+    }
+    
+    if(computerChoice==='Bat'){
+        result='Computer won.';
+    }else if(computerChoice==='Ball'){
+        result=`It's a tie.`;
+    }else if(computerChoice==='Stump'){
+        result='User won.';
+    }
 
-    <script>
-        let currentDisplay='';
-        document.querySelector('#display').value=currentDisplay;
-    </script>
+    alert(`You have chosen Ball, Computer choice is ${computerChoice} and ${result}`);
+
+    ">Ball</button>
+
+    <button onclick="
+    randomNumber=Math.random()*3;
+    let computerChoice;
+    let result;
+    if(randomNumber>0 && randomNumber<=1){
+        computerChoice='Bat';
+    }else if(randomNumber>1 && randomNumber<=2){
+        computerChoice='Ball';
+    }else{
+        computerChoice='Stump';
+    }
+    
+    if(computerChoice==='Bat'){
+        result='User won.';
+    }else if(computerChoice==='Ball'){
+        result='Computer won.';
+    }else if(computerChoice==='Stump'){
+        result=`Its a tie.`;
+    }
+
+    alert(`You have chosen Stump, Computer choice is ${computerChoice} and ${result}`);
+
+    ">Stump</button>
 </body>
 </html>
