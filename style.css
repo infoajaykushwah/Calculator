@@ -1,14 +1,21 @@
-*{
-    text-align: center;
-    
-}
-
-h1{
-    font-size: 50px;
-}
-
-button {
-    font-size: 25px;
+#calculator {
+    border: 1px solid grey;
+    width: 200px;
     border-radius: 5px;
-    margin: 1px;
+}
+#display {
+    margin: 10px;
+    width: 85%;
+    font-size: 25px;
+    direction: rtl;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.button {
+    margin: 3px;
+    height: 45px;
+    width: 45px;
 }
